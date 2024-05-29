@@ -35,9 +35,14 @@ public class MainActivity extends AppCompatActivity {
         int age = sharedPreferences.getInt("storedAge", 0);
 
         if(age == 0){
+
             textView.setText("Your Age : ");
         } else{
             textView.setText("Your Age : " + age);
+
+
+
+
         }
 
 
@@ -47,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     public  void Save(View view){
             if(!editText.getText().toString().matches("")){
                 int age = Integer.parseInt(editText.getText().toString());
-                textView.setText("Your Age : " + age);
+                textView.setText("your age : " + age);
 
         sharedPreferences.edit().putInt("storedAge", age).apply();
             }
